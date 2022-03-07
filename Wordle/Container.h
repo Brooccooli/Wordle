@@ -31,6 +31,8 @@ public:
 	void Add(char str[]);
 	void Add(std::string str);
 
+	void UniqueAdd(char c);
+
 	char At(int index);
 	int Length();
 };

@@ -62,6 +62,16 @@ void Container::Add(std::string str)
 		chars[index + i] = str[i];
 	}
 }
+// Only adds of char ins't in the container
+void Container::UniqueAdd(char c) 
+{
+	for (size_t i = 0; i < Length(); i++)
+	{
+		if (c == chars[i]) { return; }
+	}
+
+	chars[Length()] = c;
+}
 
 // ------------ Tools --------------
 // ---------------------------------

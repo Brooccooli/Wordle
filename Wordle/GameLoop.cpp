@@ -16,8 +16,8 @@ enum class BackgroundColor : int {
     BrightYellow = 103
 };
 
-// Adds all the wrong letter, will add duplicates
-std::string wrongLetters = "";
+// Adds all the wrong letter, wont add duplicates
+Container wrongLetters("    ");
 
 bool wordCheck(Container word, Container guess)
 {
@@ -50,7 +50,7 @@ bool wordCheck(Container word, Container guess)
         if (notFound)
         {
             std::cout << guess.At(i);
-            wrongLetters += guess.At(i);
+            wrongLetters.UniqueAdd(guess.At(i));
         }
 
         // Found but wrong position
@@ -127,7 +127,8 @@ void GameLoop::loop()
 
         guesses++;
 
-        std::cout << std::endl << std::endl << "Wrong letters: " << wrongLetters;
+        std::cout << std::endl << std::endl << "Wrong letters: ";
+        wrongLetters.Print();
         std::cout << std::endl << "Guesses left: " << 6 - guesses << std::endl;
 	}
 }
