@@ -17,6 +17,9 @@ void titleScreen()
 
 	AsciiArt ascii;
 	ascii.print(titleAscii);
+
+	std::cout << "Yellow = Letter is in the word but in another position" << std::endl;
+	std::cout << "Green = Letter is in the word and in the correct position" << std::endl;
 }
 
 int main() {

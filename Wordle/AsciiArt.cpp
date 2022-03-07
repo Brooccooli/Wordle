@@ -20,18 +20,22 @@ void AsciiArt::print(std::string input)
 	cout << endl;
 	for (size_t i = 0; i < input.length(); i++)
 	{
+		// New line
 		if (input[i] == '=')
 		{
 			cout << endl;
 		}
+		// Green box
 		else if(input[i] == 'g')
 		{
 			cout << BACKGROUND(BackgroundColor::Green, " ");
 		}
+		// Red box
 		else if(input[i] == 'r')
 		{
 			cout << BACKGROUND(BackgroundColor::Red, " ");
 		}
+		// Empty space
 		else 
 		{
 			cout << " ";

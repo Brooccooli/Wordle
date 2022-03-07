@@ -37,6 +37,7 @@ std::string FileReader::Read() {
 
 	int i = 0;
 	while (!indata.eof()) { // keep reading until end-of-file
+		// Breaks if index = random position
 		if (random == i) 
 		{
 			break;

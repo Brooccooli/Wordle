@@ -73,6 +73,7 @@ bool wordCheck(Container word, Container guess)
 // Game logic loop
 void GameLoop::loop() 
 {
+    // Prints ascii art
     AsciiArt art;
 
     // Gets a random word
@@ -86,10 +87,10 @@ void GameLoop::loop()
 	Container guess("test");
     int guesses = 0;
 
-    //The loop
+    // The loop
 	while (true) 
 	{
-        //Loss
+        // Loss
         if (guesses >= 6)
         {
             std::cout << std::endl << "No more tries! The word was: ";
@@ -100,7 +101,7 @@ void GameLoop::loop()
 
 		std::cout << std::endl << "Guess a five letter word!" << std::endl << ":";
 		
-        //Right amount of characthers
+        // Makes sure input is no longer or shorter than 5 caracthers
         while (true)
         {
             char temp[10];
@@ -113,10 +114,10 @@ void GameLoop::loop()
             std::cout << BACKGROUND(BackgroundColor::Red, "NOT FIVE LETTERS") << std::endl;
         }
 
-        //Makes string uppercase
+        // Makes string uppercase
         guess.Uppercase();
 
-        //Win and prints out the letters with background color
+        // Checks win condition and prints out the letters with background color
         if (wordCheck(cWord, guess)) 
         {
             std::cout << std::endl << "CORRECT!" << std::endl;
