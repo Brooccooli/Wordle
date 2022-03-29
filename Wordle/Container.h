@@ -14,12 +14,12 @@ class Container
 private:
 	const int length = 80;
 	const char empty = *"";
-	char chars[80];
+	char chars[80]; // feedback: not sure I understand why this has size 80 while you have words of size 5 in the file.
 	void clearContainer();
 
 public:
 	Container(char str[]);
-	Container(std::string str);
+	Container(std::string str); // feedback: this argument as well as args in Set() and Add() could be string refs to avoid copying.
 
 	void Uppercase();
 

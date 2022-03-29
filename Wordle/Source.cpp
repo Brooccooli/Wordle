@@ -3,6 +3,8 @@
 #include "GameLoop.h"
 #include "AsciiArt.h"
 
+//feedback: this file could have a more representative name, like "TitleScreen.cpp" or "AsciiBackground.cpp"
+
 void titleScreen() 
 {
 	std::string titleAscii = "";

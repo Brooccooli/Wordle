@@ -14,7 +14,8 @@ Why I choose this container:
 // Clears the container
 void Container::clearContainer() 
 {
-	for (size_t i = 0; i < length; i++)
+	for (size_t i = 0; i < length; i++) // feedack: is there a specific reason you wanted to set each element to an empty string? Often char buffers are either filled
+		// or only 1st element of them is set to '\0' - null terminator
 	{
 		chars[i] = empty;
 	}
