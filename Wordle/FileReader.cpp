@@ -33,7 +33,9 @@ std::string FileReader::Read() {
 	indata >> words;
 
 	// Ramdomize word
-	int random = randNum(8598);
+	int random = randNum(8598); // feedback: it's ok to trust the specification of the assignemnt, that text file contains exactly 8598 lines but
+								// for more reliable solution I'd count how many lines was there in fact, from the reading code below and then take
+								// a random line from that range(its ok to read whole file into RAM in this case, but make sure you release it after)
 
 	int i = 0;
 	while (!indata.eof()) { // keep reading until end-of-file
